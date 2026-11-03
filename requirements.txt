@@ -1,0 +1,6 @@
+pandas
+scikit-learn
+lightgbm
+numpy
+rasterio
+jupyter
