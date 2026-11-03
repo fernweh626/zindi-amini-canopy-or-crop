@@ -1,6 +1,6 @@
 # Amini Canopy or Crop Challenge — Competition Design & Benchmark
 
-> **My role:** Competitions Lead at [Zindi](https://zindi.world) — I ran this competition end to end and wrote the starter notebook and benchmark solution that participants built from.
+> **My role:** Competitions Lead at [Zindi](https://zindi.world) (April 2019 – November 2025) — I owned this competition as a product, from problem definition through launch, and built the starter notebook and benchmark solution that participants built from.
 > **Competition page:** https://zindi.world/competitions/amini-canopy-or-crop-challenge
 > **Data (not redistributed here):** https://zindi.world/competitions/amini-canopy-or-crop-challenge/data
 
@@ -10,8 +10,15 @@ Classify what is growing on the ground from satellite imagery: a **multiclass cr
 - **Partner / sponsor:** TODO (e.g. Amini)
 - **Intended users of the outcome:** TODO (who would use a model like this, and for what decision?)
 
+## Product thinking
+- **Users:** (1) data scientists on Zindi, mostly across Africa, ranging from first-timers to experts; (2) the partner who needs a usable model. TODO: confirm
+- **Job to be done:** turn a real-world problem into a well-posed ML task that participants can start on in minutes and that produces a model the partner can use.
+- **Success metrics:** participation and submission volume, score progression above the benchmark, solution quality for the partner. TODO: add actuals
+- **Key trade-offs:** a benchmark strong enough to be credible but weak enough to leave headroom; free-tier compute vs model power; a raw-data realism vs a clean, learnable task.
+- **Technical decisions I made or shaped:** data format and packaging, evaluation metric, validation split, benchmark model. TODO: confirm and add detail
+
 ## My contribution (product & delivery)
-- Ran the competition lifecycle: scoping → data packaging → launch → community support → evaluation. TODO: edit to what you actually owned
+- Owned the competition lifecycle as product lead: scoping → data packaging → launch → community support → evaluation. TODO: edit to what you actually owned
 - Designed the participant experience: a starter notebook that frames the data (each `ID` = one pixel over time), the target, and the open modelling questions, so first-time participants can submit quickly.
 - Built a **benchmark solution** that sets a credible baseline without giving the whole game away.
 - TODO: anything on metric choice, timeline, prizes, partner management, community engagement
