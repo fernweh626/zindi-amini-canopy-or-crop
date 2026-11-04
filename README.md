@@ -20,9 +20,9 @@ Classify what is growing on the ground from satellite imagery: a **multiclass la
 - A participation incentive: attend all three webinars *and* make a leaderboard submission to qualify for a 30-minute mentorship call with an Amini or Zindi EO specialist (code help, industry and job-market insight, interview tips, networking).
 
 **Webinar series** (recordings: [1](https://www.youtube.com/watch?v=A4gkYY1vVwQ), [2](https://www.youtube.com/watch?v=AsCex-fsPok), [3](https://www.youtube.com/watch?v=fqQAT9nmGMM)):
-1. Where and how to source EO data? (13 Feb)
-2. Processing EO data for machine learning (27 Feb)
-3. Building your pipeline: from data to model outputs (13 Mar)
+1. Where and how to source EO data? (13 Feb 2025)
+2. Processing EO data for machine learning (27 Feb 2025)
+3. Building your pipeline: from data to model outputs (13 Mar 2025)
 
 **Trade-offs I managed**
 - A benchmark credible enough to build on but with headroom left for participants.
