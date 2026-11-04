@@ -1,44 +1,57 @@
-# Amini Canopy or Crop Challenge — Competition Design & Benchmark
+# Amini Canopy or Crop Challenge — Competition Design, Partner Engagement & Benchmark
 
-> **My role:** Competitions Lead at [Zindi](https://zindi.world) (April 2019 – November 2025) — I owned this competition as a product, from problem definition through launch, and built the starter notebook and benchmark solution that participants built from.
+> **My role:** Competitions Lead at [Zindi](https://zindi.world) (April 2019 – November 2025). I owned this competition as a product and was the partner manager for the Amini relationship, which I led across 5 challenges.
 > **Competition page:** https://zindi.world/competitions/amini-canopy-or-crop-challenge
 > **Data (not redistributed here):** https://zindi.world/competitions/amini-canopy-or-crop-challenge/data
+> **Winning solution write-up (I supported the winners in writing and publishing it):** https://zindi.world/learn/winning-solution-to-amini-canopy-or-crop-challenge
 
 ## The problem
-Classify what is growing on the ground from satellite imagery: a **multiclass crop / canopy classification** problem where each sample is a single pixel observed across multiple time periods. Reliable land-cover and crop maps feed agricultural planning, monitoring and food-security decisions.
+Classify what is growing on the ground from satellite imagery: a **multiclass land-cover classification** problem (`0` = forest, `1` = cocoa, `2` = palm). Each sample is a single pixel observed across multiple time periods. Reliable crop and canopy maps support agricultural planning and monitoring.
 
-- **Partner / sponsor:** TODO (e.g. Amini)
-- **Intended users of the outcome:** TODO (who would use a model like this, and for what decision?)
+- **Partner:** Amini, an Earth Observation (EO) data company
+- **Evaluation metric:** multiclass **F1 score**, chosen because the classes are imbalanced, so plain accuracy would reward predicting the majority class.
 
 ## Product thinking
-- **Users:** (1) data scientists on Zindi, mostly across Africa, ranging from first-timers to experts; (2) the partner who needs a usable model. TODO: confirm
-- **Job to be done:** turn a real-world problem into a well-posed ML task that participants can start on in minutes and that produces a model the partner can use.
-- **Success metrics:** participation and submission volume, score progression above the benchmark, solution quality for the partner. TODO: add actuals
-- **Key trade-offs:** a benchmark strong enough to be credible but weak enough to leave headroom; free-tier compute vs model power; a raw-data realism vs a clean, learnable task.
-- **Technical decisions I made or shaped:** data format and packaging, evaluation metric, validation split, benchmark model. TODO: confirm and add detail
+**The tension.** Earth Observation is a steep step for most data scientists: it needs new data sources, formats and tooling. We wanted something that engaged the whole community without being out of reach, but that was still more than a toy. We needed something "in between".
 
-## My contribution (product & delivery)
-- Owned the competition lifecycle as product lead: scoping → data packaging → launch → community support → evaluation. TODO: edit to what you actually owned
-- Designed the participant experience: a starter notebook that frames the data (each `ID` = one pixel over time), the target, and the open modelling questions, so first-time participants can submit quickly.
-- Built a **benchmark solution** that sets a credible baseline without giving the whole game away.
-- TODO: anything on metric choice, timeline, prizes, partner management, community engagement
+**The decision.** Amini chose to optimise for **community engagement** rather than a production-ready solution they could implement inside their company. That changed how I shaped the challenge:
+- A well-posed tabular framing, where each pixel's time series is aggregated into features, so participants don't need deep EO tooling to submit.
+- A learning path alongside the competition: **3 webinars co-hosted with Amini** that built EO skills step by step.
+- A participation incentive: attend all three webinars *and* make a leaderboard submission to qualify for a 30-minute mentorship call with an Amini or Zindi EO specialist (code help, industry and job-market insight, interview tips, networking).
+
+**Webinar series** (recordings: [1](https://www.youtube.com/watch?v=A4gkYY1vVwQ), [2](https://www.youtube.com/watch?v=AsCex-fsPok), [3](https://www.youtube.com/watch?v=fqQAT9nmGMM)):
+1. Where and how to source EO data? (13 Feb)
+2. Processing EO data for machine learning (27 Feb)
+3. Building your pipeline: from data to model outputs (13 Mar)
+
+**Trade-offs I managed**
+- A benchmark credible enough to build on but with headroom left for participants.
+- Accessibility (free-tier compute, a simple tabular framing) vs. the richness of raw EO data.
+- Partner goals (community reach) vs. a solution the partner could deploy.
+
+## My contribution
+- **Partner management:** led the Amini engagement across 5 challenges and aligned on this challenge's objective of community engagement over an implementable solution.
+- **Challenge design:** scoped the task, the data format (long format, one `ID` per pixel over time), and the F1 metric given the class imbalance.
+- **Participant enablement:** wrote the starter notebook and a benchmark solution, and co-ran the 3-part webinar series with the partner.
+- **Community & outcomes:** supported the winning team in writing up and publishing their solution so the learning is public.
 
 ## Approach (benchmark)
 | Step | Decision | Why |
 |---|---|---|
 | Data shape | Long format: one row per pixel per time step | Mirrors how satellite time series arrive |
 | Feature engineering | Aggregate each band per pixel: mean, std, min, max, median | Collapses the time series into a fixed-length tabular vector |
-| Model | `LightGBM` classifier | Fast, strong on tabular data, runs on free-tier compute so it stays accessible |
-| Validation | 80/20 stratified split | Preserves class balance |
-| Metric | Weighted/multiclass **F1** | See notebook |
+| Model | `LightGBM` classifier | Fast, strong on tabular data, runs on free-tier compute |
+| Validation | 80/20 stratified split | Preserves the class imbalance in both folds |
+| Metric | Multiclass F1 | Robust to imbalance |
 
-The starter notebook deliberately leaves **Feature Engineering** and **Modelling** as open prompts (time-series features, ensembling, speed vs accuracy) to teach rather than hand over a solution.
+The starter notebook deliberately leaves **Feature Engineering** and **Modelling** as open prompts (time-series features, ensembling, speed vs. accuracy) to teach rather than hand over a solution.
 
 ## Results & impact
+- Winning scores reached a **perfect score**, which we anticipated for a well-posed tabular framing.
 - Participants: TODO
 - Submissions: TODO
-- Benchmark score → winning score: TODO
-- Other outcomes (partner adoption, press, follow-ups): TODO
+- Webinar attendance / mentorship uptake: TODO
+- Benchmark score: TODO
 
 ## Repo contents
 ```
