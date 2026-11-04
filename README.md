@@ -48,10 +48,6 @@ The starter notebook deliberately leaves **Feature Engineering** and **Modelling
 
 ## Results & impact
 - Winning scores reached a **perfect score**, which we anticipated for a well-posed tabular framing.
-- Participants: TODO
-- Submissions: TODO
-- Webinar attendance / mentorship uptake: TODO
-- Benchmark score: TODO
 
 ## Repo contents
 ```
