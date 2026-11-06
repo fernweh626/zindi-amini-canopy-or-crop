@@ -48,6 +48,11 @@ The starter notebook deliberately leaves **Feature Engineering** and **Modelling
 
 ## Results & impact
 - Winning scores reached a **perfect score**, which we anticipated for a well-posed tabular framing.
+- **Most successful challenge of the Amini partnership.** The partnership report credits pairing it with the webinars, because it took participants along the whole process and led to deep understanding.
+- **Webinar registrations:** 227 (webinar 1), 107 (webinar 2) and 76 (webinar 3).
+- **Partnership-wide reach** (Feb 2024 – Jul 2025, across the 5 Amini challenges): 3,367 users, 113 countries (42 African), 15% women, 19,766 submissions, and an estimated 90,000+ hours of data-science work.
+
+**Lessons from the partnership:** challenges paired with webinars drove the deepest engagement, and the webinar series was a hit, so webinars should accompany every challenge. The one data-collection challenge was hard to structure and had low uptake, which pushed us toward more traditional modelling challenges. Intermediate-difficulty challenges let beginners get started and also attracted the top users. Amini became a known name on Zindi for engaging challenges.
 
 ## Repo contents
 ```
